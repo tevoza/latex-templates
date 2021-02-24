@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#copies over template contents into a new directory
+#supply name of new directory to be created
+#place script in PATH to run anywhere! enjoy!
+
+if [ $# -eq 0 ]; then
+    echo "Please provide project directory"
+    exit 1
+fi
+
+TEMPLATE_DIR="/home/adam/drive/Templates/latex-templates/eng-report-long/*"
+PROJ_DIR=`pwd`
+
+mkdir $1
+cp -r $TEMPLATE_DIR $PROJ_DIR/$1
