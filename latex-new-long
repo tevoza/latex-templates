@@ -9,8 +9,10 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-TEMPLATE_DIR="/home/adam/drive/Templates/latex-templates/eng-report-long/*"
+TEMPLATE_DIR="/home/adam/drive/Templates/latex-templates/eng-report-long/"
+TEMPLATE_NAME="eng-report-long.tex"
 PROJ_DIR=`pwd`
 
 mkdir $1
-cp -r $TEMPLATE_DIR $PROJ_DIR/$1
+cp -r $TEMPLATE_DIR/* $PROJ_DIR/$1
+mv $PROJ_DIR/$1/$TEMPLATE_NAME $PROJ_DIR/$1/$1.tex
